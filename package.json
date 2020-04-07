@@ -1,20 +1,39 @@
 {
-  "name": "referals",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon"
+  "author": {
+    "name": "Alexey V.Ryapisov",
+    "email": "tealikes@yandex.ru"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/js-aliens/referral-mongo/issues"
+  },
   "dependencies": {
-    "mongo": "git+https://github.com/tealikes/referals.git",
-    "mongodb": "^3.5.5",
+    "dotenv": "^8.2.0",
     "mongoose": "^5.9.5"
   },
+  "description": "creating a referral structure",
+  "directories": {
+    "lib": "lib"
+  },
+  "homepage": "https://github.com/js-aliens/referral-mongo#readme",
+  "keywords": [
+    "referral",
+    "referrals",
+    "referal"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "referral-mongo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-aliens/referral-mongo.git"
+  },
+  "scripts": {
+    "test": "jest --detectOpenHandles --verbose"
+  },
+  "version": "2.3.9",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "@shelf/jest-mongodb": "^1.1.5",
+    "jest": "^25.3.0",
+    "mongodb-memory-server": "^6.5.2"
   }
 }

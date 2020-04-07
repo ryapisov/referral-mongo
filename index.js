@@ -1,104 +1,67 @@
-const referal = require('./referral')
+require('dotenv').config()
+/*= API:
+four methods:
+  - createReferal({userId, data})
+  - createReferal({userId, parentId, data})
+  - getReferrals(userId)
+  - updateReferal(userId, {})
+  - deleteReferral(userId)
+*/
+'use strict'
+// module.exports = require('./lib/api')
 
-// API
-// referal.update(userID, {})
-// referal.create(userID)
-// referal.create(userID, parentID)
-// referal.get(userID)
+const {
+  createReferal,
+  getReferrals,
+  updateReferal,
+  deleteReferral,
+} = require('./lib/api')
 
 
+function ref(user){
+  console.log(user.children)
+}
 
-// referal.update(
-//   1,
-//   {
-//     money:500,
-//     name:'GoblinShow',
-//   })
+ getReferrals(2).then((user)=> ref(user))
 
-// referal.create({
-//   userId:'1',
-//   data:{money:500, name:'Mashina'}
+// updateReferal(3, {balance:4883, name:"moNogs233"})
+
+//deleteReferral(5)
+
+// createReferal({
+//   userId:1,
+// //  parentId:'',
+//   data:{balance:400, name:'Vasa Golub1'}
 // })
 
-// referal.create({
+// createReferal({
 //   userId:'2',
 //   parentId:'1',
-//   data:{money:22, name:'Valera772'}
+//   data:{balance:502, name:`Vasa Golub${2}`}
 // })
 
-// referal.create({
-//   userId:'3',
-//   parentId:'2',
-//   data:{money:205, name:'Valera'}
+// createReferal({
+//   userId:3,
+//   parentId:2,
+//   data:{balance:500, name:`Vasa Golub${3}`}
 // })
 
-// referal.create({
-//   userId:'4',
-//   parentId:'2',
-//   data:{money:205, name:'Valera'}
+// createReferal({
+//   userId:4,
+//   parentId:3,
+//   data:{balance:500, name:`Vasa Golub${3}`}
 // })
 
-// referal.create({
-//   userId:'5',
-//   parentId:'4',
-//   data:{money:205, name:'Valera'}
+// createReferal({
+//   userId:15,
+//   parentId:4,
+//   data:{balance:500, name:`Vasa Golub${3}`}
 // })
 
-// referal.create({
-//   userId:'6',
-//   parentId:'5',
-//   data:{money:205, name:'Valera'}
+// createReferal({
+//   userId:"9",
+//   parentId:"2",
+//   data:{balance:500, name:`Vasa Golub${3}`}
+// }).then((user)=>{
+//   console.log(user)
 // })
-
-// referal.create({
-//   userId:'7',
-//   parentId:'6',
-//   data:{money:205, name:'Valera'}
-// })
-
-// referal.create({
-//   userId:'8',
-//   parentId:'7',
-//   data:{money:205, name:'Valera'}
-// })
-
-// referal.create({
-//   userId:'9',
-//   parentId:'8',
-//   data:{money:205, name:'Valera'}
-// })
-
-// referal.create({
-//   userId:'10',
-//   parentId:'9',
-//   data:{money:205, name:'Valera'}
-// })
-
-// referal.create({
-//   userId:'11',
-//   parentId:'10',
-//   data:{money:205, name:'Valera'}
-// })
-
-// referal.create({
-//   userId:'12',
-//   parentId:'11',
-//   data:{money:205, name:'Valera'}
-// })
-
-// referal.create({
-//   userId:'13',
-//   parentId:'12',
-//   data:{money:205, name:'Valera'}
-// })
-
-//   function fun(i){
-//     setTimeout(function() {
-//       console.log(i)
-//       newReferal(i, i-1).then(()=>console.log('СОЗДАНО', i))
-//     }, 100 * i)
-//   }
-//
-//  for (let i = 2; i < 100000; i++){
-// //  fun(i)
-//  }
