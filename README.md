@@ -56,6 +56,14 @@ createReferal({
 })
 ```
 
+### API get referrals
+
+returns a Promise:
+
+```js
+getReferrals(userId:5)
+```
+
 ### API update referral
 
 returns a Promise:
